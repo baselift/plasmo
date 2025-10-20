@@ -134,7 +134,7 @@ function handleMV3HotCsp(program: MV3Data) {
 
   if (hot) {
     const csp = program.content_security_policy || {}
-    csp.extension_pages = cspPatchHMR(csp.extension_pages)
+    csp.extension_pages = cspPatchHMR(csp.extension_pages, '')
     // Sandbox allows eval by default
     if (csp.sandbox) {
       csp.sandbox = cspPatchHMR(csp.sandbox)
